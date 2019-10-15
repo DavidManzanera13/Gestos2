@@ -1,0 +1,18 @@
+body{
+    background-color: lightgrey;
+ }
+ body.claro{
+    background-color: aliceblue;
+ }
+ body.obscuro{
+    background-color: cadetblue;
+ }
+ 
+ button{
+    background-color: greenyellow;
+    width: 100%;
+    padding: 30px;
+    font-size: 1em;
+    margin-top: 10px;
+ }
+ 
