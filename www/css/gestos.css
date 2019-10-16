@@ -21,10 +21,90 @@ div{
    width: 100%;
    height: 40vh;
    margin-top: 10px;
+  
 }
 h1{
    text-align: center;
    margin: 10px;
    font-size: 2em;
    text-transform: uppercase;
+}
+
+#zona-gestos.tap{
+   -webkit-animation: click 1.5s 1;
+}
+
+#zona-gestos.doubletap{
+   -webkit-animation: pulsacion 1.5s 1;
+}
+
+#zona-gestos.press{
+   -webkit-animation: presion 1.5s 1;
+}
+#zona-gestos.swipeD{
+   -webkit-animation: swipeDerecha 2s 1;
+}
+#zona-gestos.swipeI{
+   -webkit-animation: swipeIzquierda 2s 1;
+}
+#zona-gestos.rotate-R{
+   -webkit-animation: rotarR 2s 1;
+}
+#zona-gestos.rotate-L{
+   -webkit-animation: rotarL 2s 1;
+}
+
+@-webkit-keyframes click {
+   0%, 100%{
+       background-color: greenyellow;
+   }
+   50%{
+       background-color: blue;
+   }
+}
+
+@-webkit-keyframes pulsacion{
+   0%, 100%{
+       background-color: greenyellow;
+   }
+   50%{
+       background-color: rgb(238, 250, 221);
+   }
+}
+
+@-webkit-keyframes presion{
+   0%, 100%{
+       background-color: greenyellow;
+   }
+   50%{
+       background-color:  rgb(42, 63, 11);
+   }
+}
+
+@-webkit-keyframes swipeDerecha{
+   0%, 100%{
+       margin-left: 0%;
+   }
+   50%{
+       margin-left: 100%;
+   }
+}
+@-webkit-keyframes swipeIzquierda{
+   0%, 100%{
+       width: 100%;
+   }
+   50%{
+       width: 0%;
+   }
+}
+
+@-webkit-keyframes rotarR{
+   100%{
+       -webkit-transform: rotate(360deg);
+   }
+}
+@-webkit-keyframes rotarL{
+   100%{
+       -webkit-transform: rotate(-360deg);
+   }
 }

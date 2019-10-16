@@ -25,9 +25,44 @@ var app = {
         hammertime.get('pinch').set({enable: true});
         hammertime.get('rotate').set({enable: true});
  
-        hammertime.on('tap doubletap pan swipe press pinch rotate', function(ev){
+        zona.addEventListener('webkitAnimationEnd',function(e){
+            zona.className = '';
+        })
+ 
+        hammertime.on('tap', function(ev){
             document.querySelector('#info').innerHTML = ev.type+'!';
+            zona.className = 'tap';
         });
+ 
+        hammertime.on('doubletap', function(ev){
+            document.querySelector('#info').innerHTML = ev.type+'!';
+            zona.className = 'doubletap';
+        });
+       
+        hammertime.on('press', function(ev){
+            document.querySelector('#info').innerHTML = ev.type+'!';
+            zona.className = 'press';
+        });
+       
+        hammertime.on('swipe', function(ev){
+            document.querySelector('#info').innerHTML = ev.type+'!';
+            var clase = undefined;
+            direccion = ev.direction;
+ 
+            if(direccion==4) clase='swipeD';
+            if(direccion==2) clase='swipeI';
+            console.log(ev.rotation);
+            zona.className = clase;
+        });
+ 
+        hammertime.on('rotate', function(ev){
+            document.querySelector('#info').innerHTML = ev.type+'!';
+           
+            if(ev.rotation > 10) zona.className='rotate-R';
+            if(ev.rotation < 0) zona.className='rotate-L';
+           
+        });
+       
     },
  
     ponloClaro: function(){
