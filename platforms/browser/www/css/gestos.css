@@ -1,18 +1,30 @@
 body{
-    background-color: lightgrey;
- }
- body.claro{
-    background-color: aliceblue;
- }
- body.obscuro{
-    background-color: cadetblue;
- }
- 
- button{
-    background-color: greenyellow;
-    width: 100%;
-    padding: 30px;
-    font-size: 1em;
-    margin-top: 10px;
- }
- 
+   background-color: lightgrey;
+}
+body.claro{
+   background-color: aliceblue;
+}
+body.obscuro{
+   background-color: cadetblue;
+}
+
+button{
+   background-color: greenyellow;
+   width: 100%;
+   padding: 30px;
+   font-size: 1em;
+   margin-top: 10px;
+}
+
+div{
+   background-color: greenyellow;
+   width: 100%;
+   height: 40vh;
+   margin-top: 10px;
+}
+h1{
+   text-align: center;
+   margin: 10px;
+   font-size: 2em;
+   text-transform: uppercase;
+}
